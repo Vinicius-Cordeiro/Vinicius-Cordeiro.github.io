@@ -1,0 +1,418 @@
+@import "/fonts/fontStyles.css";
+
+/*
+*
+*   Site design css  
+*
+*/
+
+body {
+    background-color: white;
+    scroll-behavior: smooth;
+    overflow: auto;
+    color: black;
+}
+
+.switch {
+    align-self: flex-end;
+    margin: 0.9375rem;
+    color: #765;
+}
+
+.dark-toggle {
+    display: inline-block;
+    cursor: pointer;
+    border: 2px solid #555;
+    border-radius: 1.25rem;
+    width: 3.125rem;
+    text-align: center;
+    font-size: 1rem;
+    padding: 0.1875rem;
+    margin-left: 0.3125rem;
+}
+
+.dark,
+.dark * {
+    background-color: #222;
+    color: white;
+}
+
+.borderHeader {
+    background-color: transparent;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+}
+
+.title {
+    background-color: transparent;
+    font-weight: bolder;
+    color: white;
+    text-align: center;
+    font-size: 60px;
+    font-family: playfair;
+}
+
+.siteMainText {
+    background-color: transparent;
+    text-align: center;
+    color: white;
+    font-size: medium;
+    font-weight: lighter;
+}
+
+.footer {
+    width: 100%;
+    height: 100%;
+    background-color: #777;
+    color: white;
+    text-align: center;
+    overflow: auto;
+    padding: 50px;
+    font-family: playfair;
+}
+
+.readMoreButton {
+    display: inline-block;
+    border-radius: 5px;
+    border: none;
+    background-color: rgba(75, 75, 75, 1);
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 24px;
+    padding: 20px;
+    width: 512px;
+    transition: all .5s;
+    cursor: pointer;
+    margin: 2px;
+}
+
+.readMoreButton span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    background-color: transparent;
+    transition: 0.5s;
+}
+
+.readMoreButton span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.readMoreButton:hover span {
+    padding-right: 25px;
+}
+
+.readMoreButton:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.button {
+    display: inline-block;
+    border-radius: 5px;
+    border: none;
+    background-color: rgba(75, 75, 75, 1);
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 24px;
+    padding: 20px;
+    width: 512px;
+    transition: all .5s;
+    cursor: pointer;
+    margin: 2px;
+    font-family: playfair;
+}
+
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+    background-color: transparent;
+}
+
+.button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.button:hover span {
+    padding-right: 25px;
+}
+
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+
+/* Style inputs with type="text", select elements and textareas */
+
+.code {
+    color: white;
+    background-color: black;
+    border-radius: 0px;
+    padding: 20px;
+}
+
+input[type=text],
+select,
+textarea {
+    width: 100%;
+    /* Full width */
+    padding: 12px;
+    /* Some padding */
+    border: none;
+    /* Make sure that padding and width stays in place */
+    margin-top: 6px;
+    /* Add a top margin */
+    margin-bottom: 16px;
+    /* Bottom margin */
+    resize: vertical;
+    /* Allow the user to vertically resize the textarea (not horizontally) */
+    background-color: #555;
+}
+
+input[type=email],
+select,
+textarea {
+    width: 100%;
+    /* Full width */
+    padding: 12px;
+    /* Some padding */
+    border: none;
+    /* Make sure that padding and width stays in place */
+    margin-top: 6px;
+    /* Add a top margin */
+    margin-bottom: 16px;
+    /* Bottom margin */
+    resize: vertical;
+    /* Allow the user to vertically resize the textarea (not horizontally) */
+    background-color: #555;
+}
+
+
+/* Style the submit button with a specific background color etc */
+
+input[type=submit] {
+    background-color: rgba(1, 2, 1, 0.763);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.button-success {
+    background-color: rgba(1, 2, 1, 0.763);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.button-success:pure-button {
+    background-color: rgba(1, 2, 1, 0.763);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.button-success:button-xlarge {
+    background-color: rgba(1, 2, 1, 0.763);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+/* When moving the mouse over the submit button, add a darker green color */
+
+input[type=submit]:hover {
+    background-color: rgba(15, 37, 53, 0.363);
+}
+
+
+/* Add a background color and some padding around the form */
+
+input[type=reset] {
+    background-color: rgba(1, 2, 1, 0.763);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+/* When moving the mouse over the submit button, add a darker green color */
+
+input[type=reset]:hover {
+    background-color: rgba(15, 37, 53, 0.363);
+}
+
+
+/* Add a background color and some padding around the form */
+
+.container {
+    border-radius: 0px;
+    background-color: white;
+    padding: 50px;
+    background-color: transparent;
+}
+
+.recentPostButton {
+    display: inline-block;
+    border-radius: 5px;
+    border: none;
+    background-color: rgba(1, 2, 1, 0.0);
+    color: black;
+    text-align: center;
+    font-size: 16px;
+    padding: 2px;
+    width: 350px;
+    transition: all .5s;
+    cursor: pointer;
+    margin: 5px;
+    font-weight: bolder;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.recentPostButton span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.recentPostButton span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.recentPostButton:hover span {
+    padding-right: 25px;
+}
+
+.recentPostButton:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+
+/* Create two unequal columns that floats next to each other */
+
+
+/* Left column */
+
+.leftcolumn {
+    float: left;
+    width: 75%;
+}
+
+
+/* Right column */
+
+.rightcolumn {
+    float: left;
+    width: 25%;
+    padding-left: 20px;
+}
+
+
+/* Fake image */
+
+.fakeimg {
+    background-color: transparent;
+    width: 100%;
+    padding: 20px;
+}
+
+
+/* Add a card effect for articles */
+
+.card {
+    font-family: sarpanch;
+    color: black;
+    background-color: transparent;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+.card.dark-mode-enabled {
+    color: white;
+    background-color: transparent;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+
+/* Clear floats after the columns */
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media screen and (max-width: 800px) {
+    .leftcolumn,
+    .rightcolumn {
+        width: 100%;
+        padding: 0;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* Header/Blog Title */
+
+
+/**
+*      Coding style
+*/
+
+#codeStyle {
+    border-radius: 0px;
+    background-color: transparent;
+    padding: 50px;
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: lighter;
+}
+
+.caption {
+    caption-side: top;
+    font-weight: lighter;
+    background-color: transparent;
+    color: white;
+    text-align: center;
+}
+
+body.dark-mode-enabled {
+    background-color: #333;
+    color: white;
+}

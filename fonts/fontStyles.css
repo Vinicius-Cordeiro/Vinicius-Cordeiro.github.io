@@ -1,0 +1,69 @@
+@font-face {
+    font-family: strokeyb;
+    font-weight: normal;
+    src: url("/fonts/STROKEYB.TTF");
+    background-color: transparent;
+}
+
+@font-face {
+    font-family: vibrocentricrg;
+    font-weight: normal;
+    src: url("/fonts/vibrocentric\ rg\ it.ttf");
+    background-color: transparent;
+}
+
+@font-face {
+    font-family: moksha;
+    font-weight: normal;
+    src: url("/fonts/Ynsect\ Moksha.ttf");
+    background-color: transparent;
+}
+
+@font-face {
+    font-family: forgotten;
+    font-weight: normal;
+    src: url("/fonts/forgotten\ futurist\ rg.ttf");
+    background-color: transparent;
+}
+
+@font-face {
+    font-family: nauvo;
+    font-weight: normal;
+    src: url("/fonts/nauvo___.ttf");
+    background-color: transparent;
+}
+
+@font-face {
+    font-family: sarpanch;
+    font-weight: normal;
+    src: url("/fonts/Sarpanch-Regular.ttf");
+    background-color: transparent;
+}
+
+@font-face {
+    font-family: sebastienSlab;
+    font-weight: normal;
+    src: url("/fonts/Sebastien-Slab-Round.ttf");
+    background-color: transparent;
+}
+
+@font-face {
+    font-family: PetitFormal;
+    font-weight: normal;
+    src: url("/fonts/PetitFormalScript-Regular.ttf");
+    background-color: transparent;
+}
+
+@font-face {
+    font-family: Exo;
+    font-weight: normal;
+    src: url("/fonts/Exo2.0-Light.otf");
+    background-color: transparent;
+}
+
+@font-face {
+    font-family: playfair;
+    font-weight: normal;
+    src: url("/fonts/PlayfairDisplay-Regular.ttf");
+    background-color: transparent;
+}
