@@ -432,3 +432,11 @@ body.dark-mode-enabled {
     font-family: sarpanch;
     font-size: 24px;
 }
+
+.linkref:visited {
+    color: black;
+}
+
+.linkref:visited.dark-mode-enabled {
+    color: white;
+}
