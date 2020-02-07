@@ -26,11 +26,15 @@ var setTheme = function(theme) {
     if (theme === 'dark') {
         $(".card").addClass("dark-mode-enabled");
         $("body").addClass("dark-mode-enabled");
+        $(".linkref").addClass("dark-mode-enabled");
+        $(".recentPostButton").addClass("dark-mode-enabled");
         $(".dark-toggle").text("🌕");
         setCookie('Theme', 'dark', 999);
     } else {
         $(".card").removeClass("dark-mode-enabled");
         $("body").removeClass("dark-mode-enabled");
+        $(".linkref").removeClass("dark-mode-enabled");
+        $(".recentPostButton").removeClass("dark-mode-enabled");
         $(".dark-toggle").text("🔅");
         setCookie('Theme', 'light', 999);
     }
