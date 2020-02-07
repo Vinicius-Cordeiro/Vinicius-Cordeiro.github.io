@@ -11,6 +11,7 @@ body {
     scroll-behavior: smooth;
     overflow: auto;
     color: black;
+    font-family: playfair;
 }
 
 .switch {
@@ -43,6 +44,7 @@ body {
     text-align: center;
     color: white;
     font-size: 20px;
+    font-family: playfair;
 }
 
 .title {
@@ -60,6 +62,7 @@ body {
     color: white;
     font-size: medium;
     font-weight: lighter;
+    font-family: playfair;
 }
 
 .footer {
@@ -356,7 +359,7 @@ input[type=reset]:hover {
 /* Add a card effect for articles */
 
 .card {
-    font-family: sarpanch;
+    font-family: playfair;
     color: black;
     background-color: transparent;
     padding: 10px;
@@ -423,13 +426,13 @@ body.dark-mode-enabled {
 
 .linkref {
     color: black;
-    font-family: sarpanch;
+    font-family: playfair;
     font-size: 24px;
 }
 
 .linkref.dark-mode-enabled {
     color: white;
-    font-family: sarpanch;
+    font-family: playfair;
     font-size: 24px;
 }
 
