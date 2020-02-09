@@ -9,7 +9,16 @@
     <!--link the references to the page style cheet-->
     <link href="pagesStyle.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Syntax Highlighter Additions START -->
+    <link href="/public/css/shCore.css" rel="stylesheet" type="text/css">
+    <link type="text/css" rel="Stylesheet" href="/public/css/shThemeFadeToGrey.css">
 
+    <script src="/public/js/shCore.js" type="text/javascript"></script>
+    <script src="/public/js/shBrushCpp.js" type="text/javascript"></script>
+    <script language="javascript" type="text/javascript">
+        SyntaxHighlighter.config.blogermode = true;
+        SyntaxHighlighter.all();
+    </script>
 </head>
 
 <body>
@@ -33,6 +42,7 @@
 
         <div class="row">
             <div class="leftcolumn">
+
                 <div class="card">
                     <h1>
                         <a href="/pages/blog/Unreal_Engine_4_C++_Start_Guide.html " style="color : black;">Unreal Engine 4 Start C++ Guide </a>
@@ -69,29 +79,90 @@
                     </p>
                     <a href="/pages/blog/NotGivingUpSurvival_RoadMap.html"><button class="readMoreButton"><span>Read More</span></button></a><br>
                 </div>
-            </div>
-            <div class="rightcolumn">
+
                 <div class="card">
+
+                    <h1>
+                        <a href="/pages/blog/Unreal_Engine_4_C++_UMG_Grid_Slots.html" style="color:black">Unreal Engine 4 UI Grid Slots</a>
+                    </h1>
+                    <h5>posted by: <b>Vinícius Cordeiro Feb 8, 2020</b></h5>
+                    <p>
+                        Creating dynamic inventory with Unreal Engine, is easy you just need to know where to start so I will help you with some tips
+                        <br> &#8594; Use C++ as calculations can be faster and dynamically changed using integration with blueprints
+                        <br> &#8594; Use singletons and interfaces to store informations globally so can acessed easier
+                        <br> &#8594; Always comment your comments with the necessary informations you may need after you need later to maintain the code working
+                    </p>
+                    <p>
+                        First off create a new C++ project if you don't already have one, after that import any kind of interface stuff you want to your items for now i will not import anything
+                        <br> I will use the basic borders and images from unreal engine,
+                        <p>
+                            Now create a new C++ class of type <b>UUserWidget</b> with the name of <b>_slot</b>, use public (the reason of using the _ before the name is to avoid conflicts with engine default slot names) this will give you access to the
+                            user widget class inheritence from the engine defaults. after the code compiles and Visual studio is opened fix some errors that may happen if some sort of weird bug happen. Usually is the include file on the source file that
+                            is not with the correct path just fix it
+                            <pre class="brush:cpp; ">
+                                // Your copyright notice
+                                #include "Public/YourFilePath/_slot.h "
+                            </pre>
+
+                            <h3>
+                                _slot.cpp
+                            </h3>
+                            <pre class="brush:cpp;">
+                                // Your copyright notice
+                                #include "Public/YourFilePath/_slot.h"
+    
+                            // Initialize all the neccessary slots and informations inside the slot as images and borders
+                            bool _slot::Initialize()
+                            {
+                                Super::Initialize();
+                                // we need a valid background image and a valid icon image object otherwise this cannont be initialized
+                                if(!_background || !_icon) return false;
+    
+                                // set the color of this background and make the icon transparent/invisible
+                                _background->SetColorAndOpacity(FLinearColor(0.5f,0.5f,0.5f,0.5f));
+                                _icon->SetColorAndOpacity(FLinearColor(0.f,0.f,0.f,0.f));
+                            }
+                            </pre>
+                        </p>
+                        <p>
+                            Back to the engine create a new C++ class of the type <b>UUserWidget</b> with the name of <b>_grid</b> do the same thing fixing the same issues from the bug, notice that this may or may not happen to you
+                            <pre class="brush:cpp; ">
+                                //Your Copyright Notice
+                                #include "Public/YourFilePath/_grid.h "
+                            </pre> With this problem fixed we can procced to the next steps to create our grid slot "inventory " panel
+                        </p>
+
+
+                    </p>
+                    <a href="/pages/blog/Unreal_Engine_4_C++_UMG_Grid_Slots.html "><button class="readMoreButton "><span>Read More</span></button></a><br>
+
+                </div>
+            </div>
+            <div class="rightcolumn ">
+                <div class="card ">
                     <h2> Unreal Engine 4</h2>
-                    <div class="container">
+                    <div class="container ">
                         <h3>C++</h3>
-                        <a href="/pages/blog/Unreal_Engine_4_C++_Start_Guide.html"><button class="recentPostButton"><span>UE4 Start Guide</span></button></a><br>
-                        <a href="/pages/blog/Unreal_Engine_4_C++_Minimalist_Interface.html"><button class="recentPostButton"><span>UE4 Minimalist Interface</span></button></a><br>
-                        <a href="/pages/blog/NotGivingUpSurvival_RoadMap.html"><button class="recentPostButton"><span>Not Giving Up Survival Road Map</span></button></a><br>
+                        <a href="/pages/blog/Unreal_Engine_4_C++_Start_Guide.html "><button class="recentPostButton "><span>UE4 Start Guide</span></button></a><br>
+                        <a href="/pages/blog/Unreal_Engine_4_C++_Minimalist_Interface.html "><button class="recentPostButton "><span>UE4 Minimalist Interface</span></button></a><br>
+                        <a href="/pages/blog/NotGivingUpSurvival_RoadMap.html "><button class="recentPostButton "><span>Not Giving Up Survival Road Map</span></button></a><br>
+                        <a href="/pages/blog/Unreal_Engine_4_C++_UMG_Grid_Slots.html "><button class="recentPostButton "><span>Unreal Engine Grid Slots</span></button></a><br>
+
                     </div>
                 </div>
-                <div class="card">
-                    <a href="https://www.facebook.com/ViniciusCordeiroX" target="_blank"> <img src="/img/facebookIcon.png" width=32px></a>
-                    <a href="https://twitter.com/vinicordeirox" target="_blank"> <img src="/img/twitterIcon.png" width=32px></a>
-                    <a href="https://www.instagram.com/vinicordeirox" target="_blank"> <img src="/img/instagramIcon.png" width=32px></a>
-                    <a href="https://github.com/Vinicius-Cordeiro" target="_blank"> <img src="/img/github-6-xxl.png" width=32px style="color: black"></a>
+                <div class="card ">
+                    <a href="https://www.facebook.com/ViniciusCordeiroX " target="_blank "> <img src="/img/facebookIcon.png " width=32px></a>
+                    <a href="https://twitter.com/vinicordeirox " target="_blank "> <img src="/img/twitterIcon.png " width=32px></a>
+                    <a href="https://www.instagram.com/vinicordeirox " target="_blank "> <img src="/img/instagramIcon.png " width=32px></a>
+                    <a href="https://github.com/Vinicius-Cordeiro " target="_blank "> <img src="/img/github-6-xxl.png " width=32px style="color: black "></a>
                 </div>
             </div>
         </div>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-        <script src="/public/js/darkMode.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js "></script>
+        <script src="/public/js/darkMode.js "></script>
+
     </section>
-    <footer class="footer">
+    <footer class="footer ">
         Vinícius Gonçalves Cordeiro
         <br>All Rights Reserved 2019-2020.
     </footer>

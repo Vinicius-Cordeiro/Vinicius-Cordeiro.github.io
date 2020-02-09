@@ -23,7 +23,7 @@
         // Copyright 2006 Shin, YoungJin
 
         var datatypes = 'ATOM BOOL BOOLEAN BYTE CHAR COLORREF DWORD DWORDLONG DWORD_PTR ' +
-            'DWORD32 DWORD64 FLOAT HACCEL HALF_PTR HANDLE HBITMAP HBRUSH ' +
+            'DWORD32 DWORD64 FLOAT GENERATED_BODY HACCEL HALF_PTR HANDLE HBITMAP HBRUSH ' +
             'HCOLORSPACE HCONV HCONVLIST HCURSOR HDC HDDEDATA HDESK HDROP HDWP ' +
             'HENHMETAFILE HFILE HFONT HGDIOBJ HGLOBAL HHOOK HICON HINSTANCE HKEY ' +
             'HKL HLOCAL HMENU HMETAFILE HMODULE HMONITOR HPALETTE HPEN HRESULT ' +
@@ -37,7 +37,7 @@
             'PUINT PUINT_PTR PUINT32 PUINT64 PULONG PULONGLONG PULONG_PTR PULONG32 PULONG64 ' +
             'PUSHORT PVOID PWCHAR PWORD PWSTR SC_HANDLE SC_LOCK SERVICE_STATUS_HANDLE SHORT ' +
             'SIZE_T SSIZE_T TBYTE TCHAR UCHAR UHALF_PTR UINT UINT_PTR UINT32 UINT64 ULONG ' +
-            'ULONGLONG ULONG_PTR ULONG32 ULONG64 USHORT USN VOID WCHAR WORD WPARAM WPARAM WPARAM ' +
+            'ULONGLONG ULONG_PTR ULONG32 ULONG64 UPROPERTY USHORT USN VOID WCHAR WORD WPARAM WPARAM WPARAM ' +
             'char bool short int __int32 __int64 __int8 __int16 long float double __wchar_t ' +
             'clock_t _complex _dev_t _diskfree_t div_t ldiv_t _exception _EXCEPTION_POINTERS ' +
             'FILE _finddata_t _finddatai64_t _wfinddata_t _wfinddatai64_t __finddata64_t ' +
@@ -57,7 +57,7 @@
             'thread throw true false try typedef typeid typename union ' +
             'using uuid virtual void volatile whcar_t while';
 
-        var functions = 'assert isalnum isalpha iscntrl isdigit isgraph islower isprint' +
+        var functions = 'Add assert isalnum isalpha iscntrl isdigit isgraph islower isprint' +
             'ispunct isspace isupper isxdigit tolower toupper errno localeconv ' +
             'setlocale acos asin atan atan2 ceil cos cosh exp fabs floor fmod ' +
             'frexp ldexp log log10 modf pow sin sinh sqrt tan tanh jmp_buf ' +
@@ -72,7 +72,9 @@
             'wcstombs wctomb memchr memcmp memcpy memmove memset strcat strchr ' +
             'strcmp strcoll strcpy strcspn strerror strlen strncat strncmp ' +
             'strncpy strpbrk strrchr strspn strstr strtok strxfrm asctime ' +
-            'clock ctime difftime gmtime localtime mktime strftime time';
+            'clock ctime difftime gmtime localtime mktime strftime time CreateWidget GetOwningPlayer ' +
+            ' AddChildToUniformGrid SetColorAndOpacity SetVisibility SetBrushFromTexture AddToViewport ' +
+            ' SetHorizontalAlignment SetVerticalAlignment  ';
 
         this.regexList = [
             { regex: SyntaxHighlighter.regexLib.singleLineCComments, css: 'comments' }, // one line comments

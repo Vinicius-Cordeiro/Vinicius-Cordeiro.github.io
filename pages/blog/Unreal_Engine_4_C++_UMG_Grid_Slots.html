@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Vinícius Cordeiro</title>
+    <meta charset="utf-8">
+    <!-- CSS -->
+    <link href="public/css/bootstrap.min.css" rel="stylesheet">
+    <!--link the references to the page style cheet-->
+    <link href="/pages/pagesStyle.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <!-- Syntax Highlighter Additions START -->
+    <link href="/public/css/shCore.css" rel="stylesheet" type="text/css">
+    <link type="text/css" rel="Stylesheet" href="/public/css/shThemeFadeToGrey.css">
+
+    <script src="/public/js/shCore.js" type="text/javascript"></script>
+    <script src="/public/js/shBrushCpp.js" type="text/javascript"></script>
+    <!-- 
+    <script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushAS3.js" type="text/javascript"></script>
+    <script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushBash.js" type="text/javascript"></script>
+    <script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushColdFusion.js" type="text/javascript"></script>
+    <script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushCSharp.js" type="text/javascript"></script> -->
+    <!-- <script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushCss.js" type="text/javascript"></script>
+    <script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushDelphi.js" type="text/javascript"></script>
+    <script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushDiff.js" type="text/javascript"></script>
+    <script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushErlang.js" type="text/javascript"></script>
+    <script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushGroovy.js" type="text/javascript"></script>
+    <script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushJScript.js" type="text/javascript"></script>
+    <script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushJava.js" type="text/javascript"></script>
+    <script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushJavaFX.js" type="text/javascript"></script>
+    <script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushPerl.js" type="text/javascript"></script>
+    <script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushPhp.js" type="text/javascript"></script>
+    <script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushPlain.js" type="text/javascript"></script>
+    <script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushPowerShell.js" type="text/javascript"></script>
+    <script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushPython.js" type="text/javascript"></script>
+    <script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushRuby.js" type="text/javascript"></script>
+    <script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushScala.js" type="text/javascript"></script>
+    <script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushSql.js" type="text/javascript"></script>
+    <script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushVb.js" type="text/javascript"></script>
+    <script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushXml.js" type="text/javascript"></script> -->
+
+    <script language="javascript" type="text/javascript">
+        SyntaxHighlighter.config.blogermode = true;
+        SyntaxHighlighter.all();
+    </script>
+    <!-- Syntax Highlighter Additions END -->
+</head>
+
+<body>
+    <section>
+
+        <div class="borderHeader">
+
+            <div class="title">
+                <a href="/index.html" style="color:rgba(200, 200, 200, 1); font-family: playfair;">Vinícius Cordeiro</a>
+                </button>
+            </div>
+
+            <div class="switch">Theme:
+                <span class="dark-toggle">🔅</span>
+            </div>
+            <a href="/index.html"><button class ="button" style="vertical-align: middle;"><span>Página Inicial</span></button></a>
+            <a href="/pages/blog.html"><button class="button" style="vertical-align:middle"><span>Blog</span></button></a>
+            <a href="/pages/contact.html"><button class="button" style="vertical-align:middle"><span>Contact </span></button></a>
+            <a href="https://github.com/Vinicius-Cordeiro/ " target="_blank "><button class="button " style="vertical-align:middle "><span>Portfolio </span></button></a>
+            <a href="https://www.youtube.com/channel/UC4G4oCU68bLjJoIjAQx5trQ?view_as=subscriber" target="_blank"><button class="button" style="vertical-align: middle"><span>YouTube</span></button></a>
+            <a href="/pages/about.html"><button class="button" style="vertical-align:middle"><span>About</span></button></a>
+        </div>
+
+        <div class="row">
+            <div class="leftcolumn">
+                <div>
+                    <h1>Unreal Engine 4 C++ UI Grid Slots</h1>
+                    <h5>posted by: <b>Vinícius Cordeiro Feb 8, 2020</b></h5>
+                    <p>
+                        Creating dynamic inventory with Unreal Engine, is easy you just need to know where to start so I will help you with some tips
+                        <br> &#8594; Use C++ as calculations can be faster and dynamically changed using integration with blueprints
+                        <br> &#8594; Use singletons and interfaces to store informations globally so can acessed easier
+                        <br> &#8594; Always comment your comments with the necessary informations you may need after you need later to maintain the code working
+                    </p>
+                    <p>
+                        First off create a new C++ project if you don't already have one, after that import any kind of interface stuff you want to your items for now i will not import anything
+                        <br> I will use the basic borders and images from unreal engine,
+                        <p>
+                            Now create a new C++ class of type <b>UUserWidget</b> with the name of <b>_slot</b>, use public (the reason of using the _ before the name is to avoid conflicts with engine default slot names) this will give you access to the
+                            user widget class inheritence from the engine defaults. after the code compiles and Visual studio is opened fix some errors that may happen if some sort of weird bug happen. Usually is the include file on the source file that
+                            is not with the correct path just fix it
+                            <pre class="brush:cpp; ">
+                                // Your copyright notice
+                                #include "Public/YourFilePath/_slot.h"
+                            </pre>
+                        </p>
+                        <p>
+                            Back to the engine create a new C++ class of the type <b>UUserWidget</b> with the name of <b>_grid</b> do the same thing fixing the same issues from the bug, notice that this may or may not happen to you
+                            <pre class="brush:cpp;">
+                                //Your Copyright Notice
+                                #include "Public/YourFilePath/_grid.h"
+                            </pre> With this problem fixed we can procced to the next steps to create our grid slot "inventory" panel
+                        </p>
+                    </p>
+                    <p>
+                        <h3>
+                            _slot.h
+                        </h3>
+                        <pre class="brush:cpp;">
+                            // Your copyright notice
+                            
+                            #pragma once
+
+                            #include "CoreMinimal.h"
+                            #include "Blueprint/UserWidget.h"
+                            #include "_slot.generated.h"
+                            /**
+                            *   Grid slot used to added the back panel to the inventory
+                            **/
+                            UCLASS()
+                            class MY_PROJECT_API _slot : public UUserWidget
+                            {
+                                GENERATED_BODY()
+                            public:
+                                
+                                // Overriden from UUserWidget
+
+                                // Initialize all the neccessary slots and information inside the slot as images and borders
+                                virtual bool Initialize() override;
+
+                                // Works similarly to a Begin play in this ocassion
+                                virtual void NativeConstruct() override;
+                            public:
+
+                                // background of this slot 
+                                UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Category = "Slot", meta = (BindWidget))
+                                    class UImage* _background;
+
+                                // the icon used by the item when using this slot
+                                UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Category = "Slot", meta = (BindWidget))
+                                    class UImage* _icon;
+                                
+                                // The index of this slot
+                                UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Category = "Slot")
+                                    int32 _index;
+                            };
+                        </pre>
+                        <p>
+                            Explaining the above code:
+                            <p>Code imported from the UUserWidget class, this class is the base class if you want to use umg in unreal engine 4 and C++ without touching slates</p>
+                            <pre class="brush:cpp;">
+                            // Initialize all the neccessary slots and information inside the slot as images and borders
+                            virtual bool Initialize() override;
+                           </pre>
+                            <p>
+                                Initialize overriden function is the function that sort of Initialize all the information of the widget inside the unreal engine, this works inside the engine and here you have to check every pointer and references you get as if you don't you have a high
+                                change of <b>code errors and engine crashes</b>. seriously, I've spend a lot of time without noticing that, and return a bool , for the experiences I had need to return true or the engine
+                                might crash
+                            </p>
+                            <pre class="brush:cpp;">
+                                // Works similarly to a Begin play in this ocassion
+                                virtual void NativeConstruct() override;
+                            </pre>
+                            <p>
+                                Native Construct override function will allow us to use our items as soon as they are constructed on the viewport of the player, or created does not return nothing as it's a void
+                            </p>
+                            <p>
+                                <pre class="brush:cpp;">
+                                    // background of this slot 
+                                    UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Category = "Slot", meta = (BindWidget))
+                                        class UImage* _background;
+                                 
+                                    // the icon used by the item when using this slot
+                                    UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Category = "Slot", meta = (BindWidget))
+                                        class UImage* _icon;
+                                     
+                                    // The index of this slot
+                                    UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Category = "Slot")
+                                        int32 _index;
+                                </pre>
+                                <p>
+                                    <b>UImage*</b> is a base class from the engine, we can use this to create images on the umg(UUserWidget) we are Creating other class we can use is the <b>UBorder*</b> that has similar implementation with a little bit
+                                    more properties to it, but for now I'm going to use <b>UImage*</b>
+                                </p>
+                            </p>
+
+
+                        </p>
+                        <h3>
+                            _slot.cpp
+                        </h3>
+                        <pre class="brush:cpp;">
+                            // Your copyright notice
+                            #include "Public/YourFilePath/_slot.h"
+
+                        // Initialize all the neccessary slots and informations inside the slot as images and borders
+                        bool _slot::Initialize()
+                        {
+                            Super::Initialize();
+                            // we need a valid background image and a valid icon image object otherwise this cannont be initialized
+                            if(!_background || !_icon) return false;
+
+                            // set the color of this background and make the icon transparent/invisible
+                            _background->SetColorAndOpacity(FLinearColor(0.5f,0.5f,0.5f,0.5f));
+                            _icon->SetColorAndOpacity(FLinearColor(0.f,0.f,0.f,0.f));
+                        }
+                        </pre>
+                    </p>
+
+                    <p>
+                        As I'm a lazy bastard I will just copy the hole code here the end code :|
+                        <pre class="brush:cpp">
+                        // header file
+
+                        class _slot; // forward declaration of the slot class
+
+
+                        /**
+                        *   class that is going to receive all the slots and provided a visual of the inventory
+                        */
+                        UPROPERTY(EditAnywhere, BlueprintReadWrite,meta = (BindWidget))
+                            class UUniformGridSlot* _inventoryGridPanel;
+
+                        /**
+                        *   Class used to create the inventory slots on the grid
+                        */
+                        UPROPERTY(EditAnywhere, BlueprintReadWrite)
+                            TSubclassOf<_slot> _inventorySlotClass;
+                                                
+                        /**
+                        *   Array containing all of the inventory slots on the grid panel
+                        */
+                        UPROPERTY(EditAnywhere, BlueprintReadWrite)
+                            TArray<_slot*> _inventorySlots;
+
+
+                        //Source file
+
+
+
+                        /**
+                        *   Initialize the grid panel slots
+                        */
+                        void US_InventoryScreen::_initializeGridPanelSlots()
+                        {
+                            if (!_inventoryGridPanel) return;
+                            if (!_inventorySlotClass) return;
+                            
+                            // number of columns you want this grid to have
+                            const int32 Col = 10;
+                            // the number of rows you want the grid to have
+                            const int32 Row = 1;
+                            
+                            int32 Rows = 0; // current number of rows
+                                                //↓ ¬ Number of items in the inventory
+                            for (int32 a = 0; a <= 60;)
+                            {
+                                US_InventorySlot* InventorySlot = CreateWidget<_slot>(GetOwningPlayer(), _inventorySlotClass);
+                                if (!InventorySlot) return;
+
+                                _inventorySlots.Add(InventorySlot);
+
+                                InventorySlot->AddToViewport(999);
+                                InventorySlot->_slotBackground->SetBrushFromTexture(nullptr); // you can set the icon you want the item to have here
+                                InventorySlot->_slotStack->SetVisibility(ESlateVisibility::Hidden); // we hide the slot stack too
+                                UUniformGridSlot* _gridSlot = _inventoryGridPanel->AddChildToUniformGrid(InventorySlot, Rows, (a % Col));
+                                if (!_gridSlot) return;
+                                a++;
+                                _gridSlot->SetHorizontalAlignment(EHorizontalAlignment::HAlign_Fill);
+                                _gridSlot->SetVerticalAlignment(EVerticalAlignment::VAlign_Fill);
+                                if (a % Col == Row - 1)
+                                {
+                                    Rows++;
+                                }
+                            }
+                        }
+                        </pre>
+                    </p>
+                </div>
+            </div>
+            <div class="rightcolumn ">
+                <div class="card ">
+                    <h2> Unreal Engine 4</h2>
+                    <div class="container">
+                        <h3>C++</h3>
+                        <a href="/pages/blog/Unreal_Engine_4_C++_Start_Guide.html"><button class="recentPostButton"><span>UE4 Start Guide</span></button></a><br>
+                        <a href="/pages/blog/Unreal_Engine_4_C++_Minimalist_Interface.html"><button class="recentPostButton"><span>UE4 Minimalist Interface</span></button></a><br>
+                        <a href="/pages/blog/NotGivingUpSurvival_RoadMap.html"><button class="recentPostButton"><span>Not Giving Up Survival Road Map</span></button></a><br>
+                        <a href="/pages/blog/Unreal_Engine_4_C++_UMG_Grid_Slots.html"><button class="recentPostButton"><span>Unreal Engine Grid Slots</span></button></a><br>
+                    </div>
+                </div>
+                <div class="card ">
+                    <a href="https://www.facebook.com/ViniciusCordeiroX " target="_blank "> <img src="/img/facebookIcon.png " width=32px></a>
+                    <a href="https://twitter.com/vinicordeirox " target="_blank "> <img src="/img/twitterIcon.png " width=32px></a>
+                    <a href="https://www.instagram.com/vinicordeirox " target="_blank "> <img src="/img/instagramIcon.png " width=32px></a>
+                    <a href="https://github.com/Vinicius-Cordeiro" target="_blank"> <img src="/img/github-6-xxl.png" width=32px style="color: black"></a>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        <script src="/public/js/darkMode.js"></script>
+    </section>
+    <footer class="footer">
+        Vinícius Gonçalves Cordeiro
+        <br>All Rights Reserved 2019-2020.
+    </footer>
+</body>
+
+</html>

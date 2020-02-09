@@ -16,20 +16,20 @@
  */
 
 .syntaxhighlighter {
-    background-color: #121212 !important;
+    background-color: #9c9c9c !important;
 }
 
 .syntaxhighlighter .line.alt1 {
-    background-color: #121212 !important;
+    background-color: #9c9c9c !important;
 }
 
 .syntaxhighlighter .line.alt2 {
-    background-color: #121212 !important;
+    background-color: #9c9c9c(0, 0%, 47%) !important;
 }
 
 .syntaxhighlighter .line.highlighted.alt1,
 .syntaxhighlighter .line.highlighted.alt2 {
-    background-color: #2c2c29 !important;
+    background-color: #9c9c9c !important;
 }
 
 .syntaxhighlighter .line.highlighted.number {
@@ -96,7 +96,7 @@
 
 .syntaxhighlighter .comments,
 .syntaxhighlighter .comments a {
-    color: #696854 !important;
+    color: #144625 !important;
 }
 
 .syntaxhighlighter .string,
